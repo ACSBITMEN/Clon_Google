@@ -80,7 +80,7 @@ header nav{
 header nav .btn-theme-toggle {
     background-color: var(--btn-search);
     color: var(--fonts-color);
-    padding: 10px 15px;
+    padding: 8px 13px;
     font-size: 0.9em;
     border-radius: 5px;
     margin: 0 auto 0 10px;
@@ -277,6 +277,72 @@ footer .others a:hover{
     text-decoration: underline;
 }
 
+/* Estilos para pantallas menores a 480px */
+@media (max-width: 720px) {
+    /* Header */
+    header nav {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    header nav .btn-theme-toggle {
+        margin-right: 10px;
+    }
+
+    header nav a {
+        margin-left: 10px;
+        font-size: 0.8em;
+    }
+
+    header nav .icon-apps span {
+        padding: 6px;
+    }
+
+    header nav .btn-Acceder {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Main */
+    main .main-logo {
+        width: 100%;
+    }
+
+    main .main-input {
+        width: 90%;
+    }
+
+    main .main-input-container {
+        max-width: 100%;
+    }
+
+    main .main-input input {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    main .main-buttons {
+        width: 90%;
+    }
+
+    main .main-buttons button {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    /* Footer */
+    footer .others {
+        flex-direction: column;
+    }
+
+    footer .others div {
+        margin-bottom: 5px;
+    }
+
+    footer .others a {
+        font-size: 12px;
+    }
+}
 
 /*Elaborado y comendado por Andres Suarez Bully*/
 
