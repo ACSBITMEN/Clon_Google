@@ -115,7 +115,7 @@ header nav .icon-apps span{
 
 /*hover para el icono de aplicaciones*/
 header nav .icon-apps span:hover{
-    background-color: #F9F9F9;
+    background-color: var(--btn-search);
 }
 
 /* Boton "Acceder"*/
