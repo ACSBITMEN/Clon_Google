@@ -102,7 +102,7 @@ header nav a{
 }
 
 /*hover para las etiquedas de enlace "a" dentro del nav*/
-header nav a:hover:nth-child(-n+2){
+header nav a:hover:nth-child(-n+3){
     text-decoration: underline;
 }
 
