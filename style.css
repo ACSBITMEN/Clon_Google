@@ -1,0 +1,285 @@
+/* Variables Colores */
+:root {
+    /* Colores modo claro */
+    --main-bg-color: #fff;
+    --fonts-color: #000;
+    --btn-acceder-light: #0B57D0;
+    --fonts-color-acceder-light: #e0e0e0;
+    --btn-search-light:#f8f9fa;
+    --footer-bg-color: #f2f2f2;
+    --footer-color-light: #dadce0;
+    --logo-light: url('./img/logo-google-light.png');
+
+    /* Colores modo oscuro */
+    --main-bg-color-dark: #202124;
+    --fonts-color-dark: #e0e0e0;
+    --btn-acceder-dark: #C1E6FE;
+    --fonts-color-acceder-dark: #000;
+    --btn-search-dark: #303134;
+    --footer-bg-color-dark: #171717;
+    --footer-color-light-dark: #424242;
+    --logo-dark: url('./img/logo-google-dark.png');
+}
+
+/* propiedades generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Modo claro */
+.light-mode {
+    --main-bg-color: var(--main-bg-color-light);
+    --fonts-color: var(--fonts-color-light);
+    --btn-acceder: var(--btn-acceder-light);
+    --btn-search: var(--btn-search-light);
+    --fonts-color-acceder: var(--fonts-color-acceder-light);
+    --footer-bg-color: var(--footer-bg-color-light);
+    --footer-color: var(--footer-color-light);
+    --logo: var(--logo-light);
+}
+
+/* Modo oscuro */
+.dark-mode {
+    --main-bg-color: var(--main-bg-color-dark);
+    --fonts-color: var(--fonts-color-dark);
+    --btn-acceder: var(--btn-acceder-dark);
+    --fonts-color-acceder: var(--fonts-color-acceder-dark);
+    --btn-search: var(--btn-search-dark);
+    --footer-bg-color: var(--footer-bg-color-dark);
+    --footer-color: var(--footer-color-dark);
+    --logo: var(--logo-dark);
+}
+
+
+/*body no tiene margenes y tiene fuente ROBOTO*/
+/* propiedades para el body */
+body{
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+/* HEADER  */
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+/*Barra de navegacion*/
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 25px 10px 0;
+}
+
+/* Botón de modo Oscuro/Claro */
+header nav .btn-theme-toggle {
+    background-color: var(--btn-search);
+    color: var(--fonts-color);
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    margin: 0 auto 0 10px;
+    cursor: pointer;
+}
+
+header nav .btn-theme-toggle:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*Propiedades para las etiquedas de enlace "a" dentro del nav*/
+header nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--fonts-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: .9em;
+}
+
+/*hover para las etiquedas de enlace "a" dentro del nav*/
+header nav a:hover:nth-child(-n+2){
+    text-decoration: underline;
+}
+
+/*estilos para el icono de aplicaciones*/
+header nav .icon-apps span{
+    display: inline-block;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/*hover para el icono de aplicaciones*/
+header nav .icon-apps span:hover{
+    background-color: #F9F9F9;
+}
+
+/* Boton "Acceder"*/
+header nav .btn-Acceder {
+    background-color: var(--btn-acceder);
+    color: var(--fonts-color-acceder);
+    padding: 13px 20px;
+    font-size: 1em;
+    border-radius: 30px;
+}
+
+header nav .btn-Acceder:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN (contenedor principal)*/
+main{
+    text-align: center;
+    margin-top: 80px;
+}
+
+/*contenedor del logo*/
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 25px; 
+}
+
+/*Imagen de logo principal "Google"*/
+main .main-logo img{
+    content: var(--logo);
+    width: 20em;
+    height: auto;
+}
+
+/*Segunda Seccion para el input tipo texto de busqueda*/
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+/*Contenedor de busqueda*/
+main .main-input-container{
+    width: auto;
+    max-width: 584px;
+    height: 25px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/*input tiene :hover*/
+/*Efecto Hover sobre el contener de busqueda*/
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+/*input tipo texto de busqueda*/
+main .main-input input{
+    background-color: transparent;
+    width: 450px;
+    height: 20px;
+    border: none;
+    outline: none;
+    color: var(--fonts-color);
+    font-size: 15px;
+}
+
+/*Iconos dentro del contedor de busqueda*/
+main .main-input-container span:nth-child(1){
+    font-size: 21px;
+    margin: 0 13px 0 5px;
+    cursor: default;
+}
+
+/*Iconos dentro del contedor de busqueda*/
+main .main-input-container span{
+    width: 24px;
+    margin: 0 8px 0 0;
+    color: #9aa0a6;
+    cursor: pointer;
+}
+
+
+/*Botones "Buscar con Google" Y "Voy a tener suerte"*/
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    display: inline-block;
+}
+
+main .main-buttons button{
+    height: 36px;
+    background-color: var(--btn-search);
+    border: 0;
+    font-size: 14px;
+    color: var(--fonts-color);
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+    border: 1px solid transparent;
+}
+
+/*botones tienen :hover*/
+/*Efecto Hover sobre los botones "Buscar con google" y "Voy a tener suerte"*/
+main .main-buttons button:hover{
+    border: 1px solid var(--footer-color-light);
+    box-shadow: 0 1px 0 0 var(--footer-color-light);
+    cursor: pointer;
+}
+
+main .main-buttons p{
+    color: var(--fonts-color);
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: var(--footer-bg-color);
+}
+
+footer .country{
+    padding: 15px 0;
+    border-bottom: 1px solid var(--footer-color-light);
+}
+
+footer .country p{
+    margin: 0 0 0 3%;
+    color: var(--fonts-color);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+footer .others{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    padding: 5px 0;
+}
+
+footer .others a{
+    color: var(--fonts-color);
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+footer .others a:hover{
+    text-decoration: underline;
+}
+
+
+/*Elaborado y comendado por Andres Suarez Bully*/
+
+
+
+
