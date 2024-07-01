@@ -250,11 +250,12 @@ footer .country{
     border-bottom: 1px solid var(--footer-color-light);
 }
 
-footer .country p{
+footer .country a{
     margin: 0 0 0 3%;
     color: var(--fonts-color);
     font-size: 1.1em;
     cursor: pointer;
+    text-decoration: none;
 }
 
 footer .others{
